@@ -148,17 +148,20 @@ Select a collection by number or 'q' to quit:
 
 **Based on the selection:**
 ```bash
---- Collection Selection ---
+---- Collection Selection ---
 Available collections:
   [1] nodejs (61 documents)
-  [2] typescript (1632 documents)
-  [3] reactjs (4009 documents)
+  [2] nestjs (334 documents)
+  [3] typescript (1632 documents)
+  [4] reactjs (4009 documents)
   [q] Quit
+Select a collection by number or 'q' to quit: nestjs
+❌ Invalid input. Please enter a number.
 Select a collection by number or 'q' to quit: 2
-Loading collection 'typescript' with the 'all-MiniLM-L6-v2' model.
+Loading collection 'nestjs' with the 'all-MiniLM-L6-v2' model.
 
-✅ Switched to collection: 'typescript'
+✅ Switched to collection: 'nestjs'
 
-Enter your query for 'typescript' (or type 'back' to change collection, 'quit' to exit): 
+Enter your query for 'nestjs' (or type 'back' to change collection, 'quit' to exit): 
 ```
 
