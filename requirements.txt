@@ -1,0 +1,12 @@
+# ChromaDB for vector storage
+chromadb==0.4.22
+
+# PyMuPDF for reading and extracting text from PDF files
+# The library is imported as 'fitz'
+PyMuPDF==1.23.21
+
+# TQDM for displaying progress bars in the terminal
+tqdm==4.66.1
+
+# Sentence Transformers for creating the text embeddings (vectors)
+sentence-transformers==2.2.2
