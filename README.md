@@ -8,8 +8,8 @@ This project provides a set of Python scripts to extract text from PDF documents
 - [Prerequisites](#prerequisites)
 - [Installation](#installation)
 - [Usage](#usage)
-  - [Step 1: Ingest a PDF into the Database](#step-1-ingest-a-pdf-into-the-database)
-  - [Step 2: Interactively Query the Database](#step-2-interactively-query-the-database)
+  - [Step 1: Ingest a PDF into the Database](# Step 1: Ingesting data into vector database)
+  - [Step 2: Interactively Query the Database](# Step 2: Verify data from the vector database)
 - [File Structure](#file-structure)
 
 ## Features
@@ -76,18 +76,14 @@ This project provides a set of Python scripts to extract text from PDF documents
     ```
 
 ## Usage
-
 The workflow is a two-step process: first ingest your documents, then query them.
-
 ### Step 1: Ingesting data into vector database
-
 Use the `ingest_pdf.py ` load document into the vector database.
 
 **Command:**
 ```bash
 python3 ingest_pdf.py '/read/practical-nestjs-develop-clean-mvc-web-applications-9798410685962_compress.pdf' 
 ```
-
 **on the terminal :**
 ```bash
 --- Select or Create a Collection ---
@@ -101,13 +97,11 @@ Options:
   [q] Quit
 Enter your choice (number, 'c', or 'q'): 
 ```
-
 ** to create new collection, called nestjs :**
 ```bash
 Enter your choice (number, 'c', or 'q'): c
 Enter the name for the new collection: nestjs
 ```
-
 ** after the creation of new collection, the document is uploaded:**
 ```bash
 ✅ Creating and selecting new collection: 'nestjs'
@@ -123,17 +117,12 @@ Uploading to ChromaDB: 100%|█████████████████�
 
 ✅ Successfully added all chunks. Total documents in collection: 334
 ````
-
-
 ### Step 2: Verify data from the vector database
-
 Use the `verify_db.py ` script to see the content from the vector database.
-
 **Command:**
 ```bash
 python verify_db.py 
 ```
-
 **on the terminal :**
 ```bash
 --- Collection Selection ---
@@ -145,7 +134,6 @@ Available collections:
   [q] Quit
 Select a collection by number or 'q' to quit: 
 ```
-
 **Based on the selection:**
 ```bash
 ---- Collection Selection ---
@@ -164,4 +152,14 @@ Loading collection 'nestjs' with the 'all-MiniLM-L6-v2' model.
 
 Enter your query for 'nestjs' (or type 'back' to change collection, 'quit' to exit): 
 ```
+
+## sentence-transformers model
+The scripts use the `all-MiniLM-L6-v2` model from the `sentence-transformers` library for generating embeddings. This model is a good balance between performance and speed, making it suitable for many applications.
+**here is the link to the huggingface model page: 
+```agsl
+# URL to the trending models on Hugging Face for sentence-transformers
+https://huggingface.co/models?library=sentence-transformers&sort=trending
+```
+
+
 
